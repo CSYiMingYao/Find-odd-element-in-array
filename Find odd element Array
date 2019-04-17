@@ -1,0 +1,38 @@
+public class Array 
+{	
+	public static int[] find_OddElements (int[] Array1)
+	{
+		int numberodd = 0;
+		for(int i=0; i<Array1.length;i++)
+		{
+			if(Array1[i] %2 !=0 )
+				numberodd++;
+		}
+		int[] Array2 = new int[numberodd];
+		int count=0;
+		for(int i=0;i<Array1.length;i++)
+		{
+			if(Array1[i] %2 !=0) 
+			{
+			Array2[count] = Array1[i];
+			count++;
+			}
+		}
+		return Array2;	
+	}//end method
+	public static void PrintArray(int A[])
+	{
+		for(int i=0;i<A.length;i++)
+		{
+			System.out.print(A[i] +" , ");
+		}
+		System.out.println();
+	}//end method
+	public static void main(String[] args) 
+	{
+		int [] Array1 = {27,21,19,46,98,117,119,1257};//create a Array
+		PrintArray(Array1);
+		int [] Array2 = find_OddElements (Array1);//call find odd element method
+		PrintArray(Array2);
+	}//main
+}//end class
